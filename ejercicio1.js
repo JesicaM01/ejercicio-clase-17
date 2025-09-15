@@ -48,19 +48,34 @@
 
 
 
-const verificarVacunacion = (nombre, estado) => {
-  const respuesta = estado.toLowerCase();
+//const verificarVacunacion = (nombre, estado) => {
+  //const respuesta = estado.toLowerCase();
 
-  if (respuesta === 'sí' || respuesta === 'si') {
-    console.log(`${nombreMascota} está vacunado/a.`);
-  } else if (respuesta === 'no' || respuesta === 'No') {
-    console.log(`${nombreMascota}  no está vacunado/a.`);
-  } else  {
-    console.log("Respuesta no válida. Por favor, responda 'sí' o 'no'.");
+  //if (respuesta === 'sí' || respuesta === 'si') {
+   // console.log(`${nombreMascota} está vacunado/a.`);
+  //} else if (respuesta === 'no' || respuesta === 'No') {
+   // console.log(`${nombreMascota}  no está vacunado/a.`);
+  //} else  {
+   // console.log("Respuesta no válida. Por favor, responda 'sí' o 'no'.");
+  //}
+//};
+
+//const nombreMascota = prompt("Por favor, ingrese el nombre de la mascota:");
+//const estaVacunada = prompt("¿La mascota está vacunada? (Sí/No)");
+
+//verificarVacunacion(nombreMascota, estaVacunada);
+
+
+
+const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+let intento = "";
+while (parseInt(intento) !== numeroSecreto) {
+  intento = prompt("Adivina el número secreto entre 1 y 10:");
+  let intentoNumerico = parseInt(intento);
+if (isNaN(intentoNumerico) || intentoNumerico < 1 || intentoNumerico > 10) {
+console.log("Por favor, ingresa un número válido entre 1 y 10.");
+  } else if (intentoNumerico !== numeroSecreto) {
+console.log("¡Incorrecto! Vuelve a intentarlo.");
   }
-};
-
-const nombreMascota = prompt("Por favor, ingrese el nombre de la mascota:");
-const estaVacunada = prompt("¿La mascota está vacunada? (Sí/No)");
-
-verificarVacunacion(nombreMascota, estaVacunada);
+}
+console.log(`¡Felicidades! Adivinaste el número secreto. Era ${numeroSecreto}.`);
