@@ -82,10 +82,24 @@
 
 
 
-let numerosPares = [];
-for (let i = 1; i <= 100; i++) {
-    if (i % 2 === 0) {
-        numerosPares.push(i);
+//let numerosPares = [];
+//for (let i = 1; i <= 100; i++) {
+    //if (i % 2 === 0) {
+    //    numerosPares.push(i);
+  //  }
+//}
+//console.log("Números pares del 1 al 100:", numerosPares);
+
+
+
+let numero = parseInt(prompt("Por favor ingrese un numero natural de hasta 2 cifras:"));
+if (numero >= 1 && numero <= 99) {
+if (numero >= 1 && numero <= 9) {
+        let faltante = 10 - numero;
+       alert("Le Faltan " + faltante + " para ser un numero de 2 cifras");
+    } else {
+        let faltante = 100 - numero;
+    alert ("Le Faltan " + faltante + " para ser un numero de 3 cifras")
     }
-}
-console.log("Números pares del 1 al 100:", numerosPares);
+} else 
+    alert("El numero ingresado no es valido, por favor ingrese un numero natural de hasta 2 cifras");
