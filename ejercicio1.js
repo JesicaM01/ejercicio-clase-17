@@ -67,15 +67,25 @@
 
 
 
-const numeroSecreto = Math.floor(Math.random() * 10) + 1;
-let intento = "";
-while (parseInt(intento) !== numeroSecreto) {
-  intento = prompt("Adivina el número secreto entre 1 y 10:");
-  let intentoNumerico = parseInt(intento);
-if (isNaN(intentoNumerico) || intentoNumerico < 1 || intentoNumerico > 10) {
-console.log("Por favor, ingresa un número válido entre 1 y 10.");
-  } else if (intentoNumerico !== numeroSecreto) {
-console.log("¡Incorrecto! Vuelve a intentarlo.");
-  }
+//const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+//let intento = "";
+//while (parseInt(intento) !== numeroSecreto) {
+  //intento = prompt("Adivina el número secreto entre 1 y 10:");
+ // let intentoNumerico = parseInt(intento);
+//if (isNaN(intentoNumerico) || intentoNumerico < 1 || intentoNumerico > 10) {
+//console.log("Por favor, ingresa un número válido entre 1 y 10.");
+ // } else if (intentoNumerico !== numeroSecreto) {
+//console.log("¡Incorrecto! Vuelve a intentarlo.");
+  //}
+//}
+//console.log(`¡Felicidades! Adivinaste el número secreto. Era ${numeroSecreto}.`);
+
+
+
+let numerosPares = [];
+for (let i = 1; i <= 100; i++) {
+    if (i % 2 === 0) {
+        numerosPares.push(i);
+    }
 }
-console.log(`¡Felicidades! Adivinaste el número secreto. Era ${numeroSecreto}.`);
+console.log("Números pares del 1 al 100:", numerosPares);
