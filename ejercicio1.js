@@ -31,17 +31,36 @@
 
 
 
-const convertidorDolaresAPesos = (dolares,tasacambio) => {
- return dolares * tasacambio;
+//const convertidorDolaresAPesos = (dolares,tasacambio) => {
+ //return dolares * tasacambio;
+//};
+//const dolaresIngresados = parseFloat(prompt("Por favor ingrese la cantidad en dólares que desea convertir a pesos:"));
+//const tasaDeCambio = 1400; // Ejemplo de tasa de cambio
+//const pesosConvertidos = convertidorDolaresAPesos(dolaresIngresados, tasaDeCambio);
+//if (isNaN(dolaresIngresados) || isNaN(tasaDeCambio)) {
+//console.log("Por favor ingrese valores numéricos válidos.");
+//} else {
+//console.log(`La cantidad en pesos es: ${pesosConvertidos}`);
+//}
+//if (isNaN(dolaresIngresados) || dolaresIngresados < 0) {
+//console.log("Por favor ingrese una cantidad válida en dólares.");
+//}
+
+
+
+const verificarVacunacion = (nombre, estado) => {
+  const respuesta = estado.toLowerCase();
+
+  if (respuesta === 'sí' || respuesta === 'si') {
+    console.log(`${nombreMascota} está vacunado/a.`);
+  } else if (respuesta === 'no' || respuesta === 'No') {
+    console.log(`${nombreMascota}  no está vacunado/a.`);
+  } else  {
+    console.log("Respuesta no válida. Por favor, responda 'sí' o 'no'.");
+  }
 };
-const dolaresIngresados = parseFloat(prompt("Por favor ingrese la cantidad en dólares que desea convertir a pesos:"));
-const tasaDeCambio = 1400; // Ejemplo de tasa de cambio
-const pesosConvertidos = convertidorDolaresAPesos(dolaresIngresados, tasaDeCambio);
-if (isNaN(dolaresIngresados) || isNaN(tasaDeCambio)) {
-console.log("Por favor ingrese valores numéricos válidos.");
-} else {
-console.log(`La cantidad en pesos es: ${pesosConvertidos}`);
-}
-if (isNaN(dolaresIngresados) || dolaresIngresados < 0) {
-console.log("Por favor ingrese una cantidad válida en dólares.");
-}
+
+const nombreMascota = prompt("Por favor, ingrese el nombre de la mascota:");
+const estaVacunada = prompt("¿La mascota está vacunada? (Sí/No)");
+
+verificarVacunacion(nombreMascota, estaVacunada);
